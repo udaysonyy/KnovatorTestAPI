@@ -4,10 +4,12 @@ const app = express();
 const user = require('./models/user');
 const userRoute = require('./routes/userRoute');
 const postRoute = require('./routes/postRoute');
+const findRoute = require('./routes/findRoute');
 
 app.use(express.json());
 app.use('/user', userRoute);
 app.use('/post', postRoute);
+app.use('/find', findRoute);
 
 mongoose.Promise = global.Promise;
 
